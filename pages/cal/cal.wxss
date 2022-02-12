@@ -1,0 +1,45 @@
+/* pages/cal/cal.wxss */
+.calbox{padding: 30rpx;}
+.intro{display: flex;padding: 30rpx 0;border-bottom: 4rpx solid #000;}
+.intro image{width: 260rpx;}
+.intro .rule{flex: 1;padding: 0 40rpx;font-size: 28rpx;}
+.intro .rule .tit{font-size: 40rpx;font-weight: bold;margin-bottom: 20rpx;}
+
+.wmbox{padding-top: 30rpx;}
+.wmbox input{padding:10rpx;border-radius:20rpx;border: 4rpx solid #000;display: inline-block;text-align: center;font-size: 30rpx;}
+.wmbox .tit{display: flex;margin-bottom: 20rpx;font-size: 30rpx;font-weight: bold;text-align: center;padding-right:55rpx;}
+.wmbox .tit view{flex: 1;}
+
+.userlist{border-bottom: 4rpx solid #000;margin-bottom: 40rpx;}
+.userlist .list{width: 100%;display: flex;margin-bottom: 30rpx;}
+.userlist input{margin-right: 10rpx;font-size: 30rpx;}
+.userlist input:nth-child(3){margin-right: 0;}
+.userlist icon{margin-top: 10rpx;}
+.final-price{border-bottom: 4rpx solid #000;padding-bottom: 40rpx;text-align: right;font-weight: bold;font-size: 30rpx;display: flex;align-items:center;}
+.final-price .flex1{flex: 1;}
+.final-price input{vertical-align: middle;width: 120rpx;}
+.resetbtn{border-radius:20rpx;border: 4rpx solid #000;padding: 10rpx 10rpx 0;width:250rpx;overflow: hidden;height: 70rpx;}
+.resetbtn image{vertical-align: bottom;width: 100%;}
+
+.btn-group{display: flex;margin-top: 40rpx;}
+.btn-group .btn{border-radius:20rpx;border: 4rpx solid #000;padding: 10rpx 10rpx 0;width: 50%;overflow: hidden;}
+.btn image{width: 100%;vertical-align: top;}
+.btn-group .btn:nth-child(1){margin-right: 10rpx;}
+.btn-group .btn:active{position: relative;top: 2rpx;left: 2rpx;}
+
+.calresult .mask{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.6);z-index: 99;}
+.calresult .box{position: fixed;top:50%;left: 50%;z-index: 199;width: 600rpx;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);padding: 30rpx;border-radius: 20rpx;padding:0;min-height: 300rpx;}
+.calresult .box .con{display: flex;background: #fbfbfa;border-radius:0 0 20rpx 20rpx;overflow: hidden;padding: 20rpx 0 0 0;position: relative;}
+.calresult .box .con::after{content: '';display: block;position: absolute;left: 148rpx;bottom: 0;width: 19rpx;top: 330rpx;background: #000;border-radius: 10rpx 0 0 0;}
+.calresult .sharebtn{margin-top: 30rpx;border:#000 solid 4rpx;border-radius: 20rpx;font-size: 36rpx;background: #fff;}
+.calresult .box .lists{flex: 1;display: flex;flex-direction: column;justify-content: center;}
+.calresult image{width: 300rpx;margin-right:20rpx;vertical-align: bottom;position: relative;z-index: 10;}
+.calresult .box .tit{text-align: center;width: 100%;padding: 20rpx 0;font-size: 30rpx;font-weight: bold;border-bottom: 4rpx solid #000;background: #fff;border-radius:20rpx 20rpx 0 0;}
+.close-icon{position: absolute;top: -50rpx;right: -50rpx;width: 60rpx;height: 60rpx;}
+.calresult .list{font-size: 30rpx;margin-bottom: 20rpx;}
+.calbox .titmsg{font-size: 26rpx;background: #f5f5f5;padding: 10rpx;border-radius: 10rpx;line-height: 1.8;border: 4rpx solid #000;position: relative;}
+.calbox .titmsg::after{content: '';display: block;position: absolute;left: 50rpx;bottom: -15rpx;width: 20rpx;height: 20rpx;border: 4rpx solid #000;transform:rotate(45deg);border-top: none;border-left: none;background: #f5f5f5;}
+.calbox .titmsg image{width: 40rpx;vertical-align: top;}
+
+.calshare .box{position: static;top:0;left: 0;width:auto;-webkit-transform: none;transform: none;padding:0 30rpx 30rpx;}
+.calresult .box .con::after{top: 240rpx;}

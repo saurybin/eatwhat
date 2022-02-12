@@ -1,0 +1,26 @@
+/* pages/who/who.wxss */
+.shakebox .mask{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 99;}
+.shakeAni{position: absolute;top: 50%;left: 55%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);width: 600rpx;z-index: 100;}
+
+.shakebtn{display: flex;padding: 30rpx 0;border-bottom: 4rpx solid #000;}
+.shakebtn image{width: 260rpx;}
+.shakebtn .rule{flex: 1;padding: 0 40rpx;font-size: 28rpx;}
+.shakebtn .rule .tit{font-size: 40rpx;font-weight: bold;margin-bottom: 20rpx;}
+.shakebtn .rule .btn{border: 4rpx solid #000;text-align: center;display: inline-block;padding: 20rpx 30rpx;border-radius: 20rpx;margin-top: 20rpx;}
+
+.num-list{padding: 30rpx;font-size: 28rpx;}
+.num-list .list{margin-bottom: 20rpx;}
+.idx{font-weight: bold;}
+.num{color: #cb1224;font-size: 32rpx;font-weight: bold;}
+
+.button-group{display: flex;}
+.button-group .btn{margin-right: 20rpx;}
+.button-group .btn:active{position: relative;top: 2rpx;left: 2rpx;}
+
+.resultbox .mask{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.6);z-index: 99;}
+.resultbox .box{position: fixed;top:50%;left: 50%;z-index: 199;width: 500rpx;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);background: #fff;padding: 30rpx;border-radius: 20rpx;}
+.resultbox .box {text-align: center;font-size: 30rpx;font-weight: bold;}
+.resultbox .box .xc{width: 60%;margin: 0 20% 20rpx;}
+.resultbox .close-icon{position: absolute;top: -50rpx;right: -50rpx;width: 60rpx;height: 60rpx;}
+.resultbox .ts{margin-bottom: 20rpx;}
+.resultbox .ts image{width: 40rpx;height:40rpx;vertical-align: top;display: inline-block;}

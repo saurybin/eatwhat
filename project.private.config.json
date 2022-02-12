@@ -1,0 +1,30 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "cal",
+          "pathName": "pages/cal/cal",
+          "query": "data=[{\"sName\":\"老哥1\",\"sPrice\":\"0.59\"},{\"sName\":\"老哥2\",\"sPrice\":\"0.89\"},{\"sName\":\"老哥3\",\"sPrice\":\"1.19\"},{\"sName\":\"老哥4\",\"sPrice\":\"1.49\"},{\"sName\":\"老哥5\",\"sPrice\":\"0.30\"},{\"sName\":\"老哥6\",\"sPrice\":\"6.54\"}]",
+          "scene": null
+        },
+        {
+          "name": "pages/who/who",
+          "pathName": "pages/who/who",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

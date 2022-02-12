@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<import src="../../components/slotmachine/slotmachine.wxml" />
+<view class="page">
+  <view class="slotbox" style="height:328rpx;" bindtap="{{isSloting ? 'slotFun' : ''}}">
+      <image src="/images/tiger.png" mode="widthFix" class="back-slot"></image>
+      <image src="/images/tigerball.png" mode="widthFix" class="ball {{ballAni}}"></image>
+      <template is="machine" data="{{...machine}}"></template>
+  </view>
+  <image src="../../images/eimg1.jpg" mode="widthFix" class="panda1" ></image>
+  <view class="panda-click" bindtap="touchPanda"></view>
+  <view class="btn-group">
+    <view class="list">
+      <view><button bindtap="{{isSloting ? 'slotFun' : ''}}">看看吃啥？\n→_→</button></view>
+    </view>
+    <view class="list">
+      <view><button bindtap="showMsg">吃点别的？\n╮(╯▽╰)╭</button></view>
+    </view>
+  </view>
+  <view class="fun-list">
+    <view class="list" bindtap="toDet" data-url="who">
+      <view><image src="/images/icon_who.png" mode="widthFix"></image>谁去拿外卖</view>
+    </view>
+    <view class="list" bindtap="toDet" data-url="cal">
+      <view><image src="/images/icon_cal.png" mode="widthFix"></image>外卖计算器</view>
+    </view>
+    <view class="list" bindtap="openEM" data-platform="mt"  wx:if="{{isForbidden}}">
+      <view><image src="/images/icon_mt.jpg" mode="widthFix" class="anihb1"></image>美团红包</view>
+    </view>
+    <view class="list" bindtap="openEM" data-platform="elm" data-type="1"  wx:if="{{isForbidden}}">
+      <view><image src="/images/icon_elm.jpg" mode="widthFix" class="anihb2"></image>饿了么红包1</view>
+    </view>
+    <view class="list" bindtap="openEM" data-platform="elm" data-type="2"  wx:if="{{isForbidden}}">
+      <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包2</view>
+    </view>
+    <view class="list" bindtap="openEM" data-platform="elm" data-type="3"  wx:if="{{isForbidden}}">
+      <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包3</view>
+    </view>
+  </view>
+  <view class="self-choose" wx:if="{{isShowMsg}}">
+    <view class="mask" bindtap="closeMsg"></view>
+    <view class="choosebox">
+      <icon class="icon-small close-icon" type="cancel" size="30" bindtap="closeMsg" color="#fff"></icon>
+      <textarea cols="30" rows="10" placeholder="请输入自己想吃的，逗号或者空格隔开（如：快餐，饺子，汉堡）" class="textarea" bindinput="setFoodsData" value="{{foodsDatas1}}"></textarea>
+      <view class="btn-group1">
+        <button bindtap="resetFoods">默认</button>
+        <button bindtap="clearFoods">清空</button>
+        <button bindtap="setFoods">添加</button>
+      </view>
+    </view>
+  </view>
+  <view class="self-choose qrbox" wx:if="{{isShowQr}}">
+    <view class="mask" bindtap="closeMsg"></view>
+    <view class="choosebox">
+      <icon class="icon-small close-icon" type="cancel" size="30" bindtap="closeMsg" color="#fff"></icon>
+      <image src="/images/qr.png" mode="widthFix"></image>
+      <view class="txt">截图保存，微信扫码联系我</view>
+    </view>
+  </view>
+  <view class="copyright"> © 秋刀鱼Bin</view>
+</view>

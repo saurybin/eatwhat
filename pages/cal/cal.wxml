@@ -1,0 +1,74 @@
+<!--pages/cal/cal.wxml-->
+<view class="calbox" wx:if="{{!fromShare}}">
+	<view class="titmsg">
+		<view>您是否还在为和同事一起点外卖，各自付多少算的头秃？</view>
+		<view>用这个算就对了！<image src="/images/icon_hjmj.png" mode="widthFix"></image><image src="/images/icon_hjmj.png" mode="widthFix"></image><image src="/images/icon_hjmj.png" mode="widthFix"></image></view>
+	</view>
+	<view class="intro">
+		<image src="/images/intro.gif" mode="widthFix"></image>
+		<view class="rule">
+			<view class="tit">简单说明</view>
+			<view>1.点击【那我+1】添加人数</view>
+			<view>2.填写信息，总价记得填</view>
+			<view>3.点击【开始算】</view>
+			<view>* 重算点击【重头再来】</view>
+		</view>
+	</view>
+	<view class="wmbox">
+		<view class="tit">
+			<view>名字</view>
+			<view>包装费</view>
+			<view>商品原价</view>
+		</view>
+		<view class="userlist">
+			<view class="list" wx:for="{{orderList}}" wx:key="index">
+				<input type="text" value="{{item.name}}" data-idx="{{index}}" data-msg="name" bindinput="setTxt"/>
+				<input type="number" value="{{item.bzMoney}}" data-idx="{{index}}" data-msg="bzMoney" bindinput="setTxt"/>
+				<input type="number" value="{{item.totalMoney}}" data-idx="{{index}}" data-msg="totalMoney" bindinput="setTxt"/>
+				<icon class="icon-small" type="cancel" size="25" bindtap="delItem" color="#cb1224" data-idx="{{index}}"></icon>
+			</view>
+		</view>
+		<view class="final-price">
+			<view class="btn resetbtn" bindtap="resetFun"><image src="/images/resetbtn.png" mode="widthFix"></image></view>
+			<view class="flex1">
+				实付总价：<input type="text" value="{{finalp}}" data-msg="finalp" bindinput="setTxt"/>
+			</view>
+		</view>
+		<view class="btn-group">
+			<view class="btn addbtn" bindtap="addOne">
+				<image src="/images/add.png" mode="widthFix"></image>
+			</view>
+			<view class="btn calbtn" bindtap="calFun">
+				<image src="/images/cal.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="calresult" wx:if="{{showResult}}">
+	<view class="mask" bindtap="closeMsg"></view>
+	<view class="box">
+		<icon class="icon-small close-icon" type="cancel" size="30" bindtap="closeMsg" color="#fff"></icon>
+		<view class="tit">计算结果</view>
+		<view class="con">
+			<image src="/images/calfun.gif" mode="widthFix"></image>
+			<view class="lists">
+				<view class="list" wx:for="{{calList}}" wx:key="index">
+					{{item.sName}}：¥ {{item.sPrice}}
+				</view>
+			</view>
+		</view>
+		<button open-type="share" class="sharebtn">分享给好友</button>
+	</view>
+</view>
+<view class="calresult calshare" wx:if="{{fromShare}}">
+	<view class="box">
+		<view class="con">
+			<image src="/images/calfun.gif" mode="widthFix"></image>
+			<view class="lists">
+				<view class="list" wx:for="{{calList}}" wx:key="index">
+					{{item.sName}}：¥ {{item.sPrice}}
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

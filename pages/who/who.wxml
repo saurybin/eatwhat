@@ -1,0 +1,33 @@
+<!--pages/who/who.wxml-->
+<view class="shakebtn">
+	<image src="/images/shake1.gif" mode="widthFix"></image>
+	<view class="rule">
+		<view class="tit">游戏规则</view>
+		<view>1.每人点击1下【我来试试】按钮</view>
+		<view>2.最小数字的人去拿！</view>
+		<view class="button-group">
+			<view class="btn" bindtap="showNum">我来试试</view>
+			<view class="btn" bindtap="reStart">重新开始</view>
+		</view>
+	</view>
+</view>
+<view class="num-list">
+	<view class="list" wx:for="{{getList}}"  wx:key="index">
+		<text>第<text class="idx">{{getList.length - index}}</text>个老哥摇到了：<text class="num">{{item}}</text></text>
+		<text wx:if="{{item == minNum && item != '0'}}">（你最小，你去拿）</text>
+		<text wx:if="{{item == '0'}}">（NB啊！游戏结束，你去拿）</text>
+	</view>
+</view>
+<view class="shakebox" wx:if="{{shakeIng}}">
+	<view class="mask"></view>
+	<image src="/images/shake.gif" mode="widthFix" class="shakeAni"></image>
+</view>
+<view class="resultbox" wx:if="{{showWho}}">
+	<view class="mask" bindtap="closeMsg"></view>
+	<view class="box">
+    <icon class="icon-small close-icon" type="cancel" size="30" bindtap="closeMsg" color="#fff"></icon>
+		<image src="/images/isme.png" mode="widthFix" class="xc"></image>
+		<view class="ts">恭喜！已经没人比你小了！<image src="/images/icon_hjmj.png" mode="widthFix"></image></view>
+		<view>！！？拿外卖的竟是我自己？？</view>
+	</view>
+</view>
