@@ -1,6 +1,4 @@
-const timetool = require('../../utils/timetool.js');
 import Machine from "../../components/slotmachine/slotmachine.js"
-const app = getApp();
 let slotBlockWidth = wx.getSystemInfoSync().windowWidth * 0.135;
 let myFoods = "饺子馄饨,快餐便当,汉堡薯条,意面披萨,包子粥店,米粉面馆,麻辣烫,炸鸡炸串,特色小吃,西餐,夹馍饼类,日料寿司,韩式料理,火锅串串,龙虾烧烤,轻食沙拉,东南亚菜";
 Page({
