@@ -30,6 +30,9 @@
 .fun-list .list view{border:#000 solid 4rpx;border-radius: 20rpx;text-align: center;margin: 0 20rpx;padding: 20rpx;font-size: 30rpx;}
 .fun-list .list image{width:250rpx;height: 250rpx;}
 .fun-list .list:nth-child(1) image,.fun-list .list:nth-child(2) image,.fun-list .list:nth-child(5) image,.fun-list .list:nth-child(6) image{width:60rpx;height: 60rpx;vertical-align: middle;margin-right: 10rpx;}
+.scroll-view_H{white-space: nowrap;height: 108rpx;overflow-y: hidden;}
+.scroll-view_H .list{float: none;min-width: 45%;width: auto !important;display: inline-block;}
+.scroll-view_H .list image{width:40rpx !important;height: 40rpx !important;vertical-align: middle;margin-right: 10rpx;}
 
 .panda1{position: fixed;z-index: -1;top: 0;right: 0;width: 240rpx;}
 .panda-click{position: fixed;z-index: 10;top: 0;right: 0;width: 200rpx;height: 345rpx;}

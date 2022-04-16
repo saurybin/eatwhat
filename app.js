@@ -1,6 +1,10 @@
 // app.js
 App({
   onLaunch() {
+    //有时候跳过审核
+    if(new Date().getTime() < 1650080328000){
+      wx.setStorageSync('sdate', '1650080328000');
+    }
     const updateManager = wx.getUpdateManager()
     updateManager.onCheckForUpdate(function (res) {
         // 请求完新版本信息的回调

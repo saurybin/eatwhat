@@ -23,18 +23,26 @@
     <view class="list" bindtap="toDet" data-url="cal">
       <view><image src="/images/icon_cal.png" mode="widthFix"></image>外卖计算器</view>
     </view>
-    <view class="list" bindtap="openEM" data-platform="mt"  wx:if="{{isForbidden}}">
+    <view class="list" bindtap="openEM" data-platform="mt" data-type="1"  wx:if="{{isForbidden}}">
       <view><image src="/images/icon_mt.jpg" mode="widthFix" class="anihb1"></image>美团红包</view>
     </view>
     <view class="list" bindtap="openEM" data-platform="elm" data-type="1"  wx:if="{{isForbidden}}">
-      <view><image src="/images/icon_elm.jpg" mode="widthFix" class="anihb2"></image>饿了么红包1</view>
+      <view><image src="/images/icon_elm.jpg" mode="widthFix" class="anihb2"></image>饿了么红包</view>
     </view>
-    <view class="list" bindtap="openEM" data-platform="elm" data-type="2"  wx:if="{{isForbidden}}">
-      <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包2</view>
-    </view>
-    <view class="list" bindtap="openEM" data-platform="elm" data-type="3"  wx:if="{{isForbidden}}">
-      <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包3</view>
-    </view>
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <view class="list" bindtap="openEM" data-platform="mt" data-type="2"  wx:if="{{isForbidden}}">
+        <view><image src="/images/icon_mt.jpg" mode="widthFix"></image>美团红包2</view>
+      </view>
+      <view class="list" bindtap="openEM" data-platform="elm" data-type="2"  wx:if="{{isForbidden}}">
+        <view><image src="/images/icon_elm.jpg" mode="widthFix"></image>饿了么红包2</view>
+      </view>
+      <view class="list" bindtap="openEM" data-platform="elm" data-type="3"  wx:if="{{isForbidden}}">
+        <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包3</view>
+      </view>
+      <view class="list" bindtap="openEM" data-platform="elm" data-type="4"  wx:if="{{isForbidden}}">
+        <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么商超红包</view>
+      </view>
+    </scroll-view>
   </view>
   <view class="self-choose" wx:if="{{isShowMsg}}">
     <view class="mask" bindtap="closeMsg"></view>

@@ -12,7 +12,7 @@ Page({
     num3: 0,
     speed:30,
     isSloting:true,
-    isForbidden:new Date().getTime() < Number(wx.getStorageSync("sdate")) ? false : true,
+    isForbidden:new Date().getTime() < Number(wx.getStorageSync("sdate")) ? false : true, //有时候跳过审核
     machine: {
       transY1: 0,
       transY2: 0,
@@ -121,13 +121,16 @@ Page({
       let path = "";
       switch (type) {
         case "1":
-          path = "pages/sharePid/web/index?scene=s.click.ele.me/5jotImu&o2i_sharefrom=wxminiapp";
-          break;
-        case "2":
           path = "ele-recommend-price/pages/guest/index?chInfo=ch_app_chsub_Wechat&_ltracker_f=tjyj2_app_grzx2&inviterId=5e93b12";
           break;
+        case "2":
+          path = "pages/sharePid/web/index?scene=s.click.ele.me%2FeujuiYu";
+          break;
         case "3":
-          path = "taoke/pages/shopping-guide/index?scene=JWB6Lmu";
+          path = "taoke/pages/shopping-guide/index?scene=C2EviYu";
+          break;
+        case "4":
+          path = "pages/sharePid/web/index?scene=s.click.ele.me%2FZT6QvYu";
           break;
         default:
           break;
@@ -140,9 +143,20 @@ Page({
         }
       })
     }else{
-      let path = "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Isa4sAcwwtgMW1R1eMkRlyETf6P5c6xL_sqJlwVhRVviBf0slfBdeHdgfpdFoYOc-a8D3zKMyejpXres8li4tcw";
+      let path = "",mtAppId = 'wx2c348cf579062e56';
+      switch (type) {
+        case "1":
+          path = "index/pages/h5/h5?f_token=0&weburl=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D2%26p%3DTkzTUr5z8qSW&f_openId=0&noshare=1&f_userId=0";
+          mtAppId = "wxde8ac0a21135c07d";
+          break;
+        case "2":
+          path = "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Isa4sAcwwtgMW1R1eMkRlyETf6P5c6xL_sqJlwVhRVviBf0slfBdeHdgfpdFoYOc-a8D3zKMyejpXres8li4tcw";
+          break;
+        default:
+          break;
+      }
       wx.navigateToMiniProgram({
-        appId: 'wx2c348cf579062e56',
+        appId: mtAppId,
         path: path,
         success(res) {
           // 打开成功
