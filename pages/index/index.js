@@ -121,16 +121,19 @@ Page({
       let path = "";
       switch (type) {
         case "1":
-          path = "ele-recommend-price/pages/guest/index?chInfo=ch_app_chsub_Wechat&_ltracker_f=tjyj2_app_grzx2&inviterId=5e93b12";
+          path = "pages/sharePid/web/index?scene=s.click.ele.me%2F2eRqDMu";
           break;
         case "2":
-          path = "pages/sharePid/web/index?scene=s.click.ele.me%2FeujuiYu";
+          path = "ele-recommend-price/pages/guest/index?chInfo=ch_app_chsub_Wechat&_ltracker_f=tjyj2_app_grzx2&inviterId=5e93b12";
           break;
         case "3":
-          path = "taoke/pages/shopping-guide/index?scene=C2EviYu";
+          path = "ele-recommend-price/pages/guest-fire/index?inviterId=5e93b12&actId=1";
           break;
         case "4":
-          path = "pages/sharePid/web/index?scene=s.click.ele.me%2FZT6QvYu";
+          path = "taoke/pages/shopping-guide/index?scene=YO6YWMu";
+          break;
+        case "5":
+          path = "pages/sharePid/web/index?scene=s.click.ele.me%2Fh6tpDMu";
           break;
         default:
           break;

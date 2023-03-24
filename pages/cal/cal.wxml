@@ -23,15 +23,15 @@
 		<view class="userlist">
 			<view class="list" wx:for="{{orderList}}" wx:key="index">
 				<input type="text" value="{{item.name}}" data-idx="{{index}}" data-msg="name" bindinput="setTxt"/>
-				<input type="number" value="{{item.bzMoney}}" data-idx="{{index}}" data-msg="bzMoney" bindinput="setTxt"/>
-				<input type="number" value="{{item.totalMoney}}" data-idx="{{index}}" data-msg="totalMoney" bindinput="setTxt"/>
+				<input type="digit" value="{{item.bzMoney}}" data-idx="{{index}}" data-msg="bzMoney" bindinput="setTxt"/>
+				<input type="digit" value="{{item.totalMoney}}" data-idx="{{index}}" data-msg="totalMoney" bindinput="setTxt"/>
 				<icon class="icon-small" type="cancel" size="25" bindtap="delItem" color="#cb1224" data-idx="{{index}}"></icon>
 			</view>
 		</view>
 		<view class="final-price">
 			<view class="btn resetbtn" bindtap="resetFun"><image src="/images/resetbtn.png" mode="widthFix"></image></view>
 			<view class="flex1">
-				实付总价：<input type="text" value="{{finalp}}" data-msg="finalp" bindinput="setTxt"/>
+				实付总价：<input type="digit" value="{{finalp}}" data-msg="finalp" bindinput="setTxt"/>
 			</view>
 		</view>
 		<view class="btn-group">

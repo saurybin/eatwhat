@@ -40,6 +40,9 @@
         <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包3</view>
       </view>
       <view class="list" bindtap="openEM" data-platform="elm" data-type="4"  wx:if="{{isForbidden}}">
+        <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么红包4</view>
+      </view>
+      <view class="list" bindtap="openEM" data-platform="elm" data-type="5"  wx:if="{{isForbidden}}">
         <view><image src="/images/icon_elm.png" mode="widthFix"></image>饿了么商超红包</view>
       </view>
     </scroll-view>
@@ -61,8 +64,8 @@
     <view class="choosebox">
       <icon class="icon-small close-icon" type="cancel" size="30" bindtap="closeMsg" color="#fff"></icon>
       <image src="/images/qr.png" mode="widthFix"></image>
-      <view class="txt">截图保存，微信扫码联系我</view>
+      <view class="txt">如有问题，微信扫码联系我</view>
     </view>
   </view>
-  <view class="copyright"> © 秋刀鱼Bin</view>
+  <view class="copyright" bindtap="showWx"> © 秋刀鱼Bin</view>
 </view>

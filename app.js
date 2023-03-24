@@ -2,8 +2,8 @@
 App({
   onLaunch() {
     //有时候跳过审核
-    if(new Date().getTime() < 1650080328000){
-      wx.setStorageSync('sdate', '1650080328000');
+    if(new Date().getTime() < 1676019600000){
+      wx.setStorageSync('sdate', '1676019600000');
     }
     const updateManager = wx.getUpdateManager()
     updateManager.onCheckForUpdate(function (res) {
